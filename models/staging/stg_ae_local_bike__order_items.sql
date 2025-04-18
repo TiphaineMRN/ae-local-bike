@@ -6,5 +6,5 @@ SELECT
     quantity AS item_quantity,
     list_price AS item_price,
     discount,
-    quantity*(list_price*(1-discount)) AS total_order_item_amount
+    ROUND(quantity*(list_price*(1-discount)),2) AS total_order_item_amount
 FROM {{source("ae_local_bike",'order_items')}}
