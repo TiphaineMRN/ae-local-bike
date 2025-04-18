@@ -1,5 +1,5 @@
 SELECT
-    customer_id,
+    CAST(customer_id AS STRING) AS customer_id,
     first_name,
     last_name,
     phone,
@@ -7,5 +7,5 @@ SELECT
     street,
     city,
     state,
-    zip_code
+    CAST(zip_code AS STRING) AS zip_code
 FROM {{source("ae_local_bike",'customers')}}
