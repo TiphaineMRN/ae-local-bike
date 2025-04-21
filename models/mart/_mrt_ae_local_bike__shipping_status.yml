@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: mrt_ae_local_bike__shipping_status
+    description: '{{ doc("mrt_ae_local_bike__shipping_status") }}'
+    columns:
+      - name: order_id
+        description: Unique identifier for the order
+        tests:
+          - not_null
+          - unique
+      - name: required_date
+        description: Required shipping date for the order
+      - name: shipped_date
+        description: Actual shipping date of the order
+      - name: shipment_status
+        description: Shipment classification ("on time" or "late shipment")
+

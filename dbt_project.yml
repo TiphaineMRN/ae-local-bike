@@ -38,5 +38,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   local_bike:
     # Applies to all files under models/example/
-    example:
-      +materialized: table
+    staging:
+      schema: stg_ae_local_bike
+      materialized: table
+    intermediate:
+      schema: int_ae_local_bike
+      materialized: view
+    mart:
+      schema: mrt_ae_local_bike
+      materialized: table

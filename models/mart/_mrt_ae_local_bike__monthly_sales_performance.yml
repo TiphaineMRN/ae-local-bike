@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: mrt_ae_local_bike__monthly_sales_performance
+    description: '{{ doc("mrt_ae_local_bike__monthly_sales_performance") }}'
+    columns:
+      - name: order_date
+        description: First day of the month representing the sales period
+        tests:
+          - not_null
+      - name: store_name
+        description: Name of the store
+      - name: total_orders_amount
+        description: Total value of all orders in the month
+      - name: avg_orders_amount
+        description: Average value of orders in the month
+      - name: total_discount_amount
+        description: Total value of discounts applied during the month
+      - name: nb_orders
+        description: Number of unique orders in the month
+      - name: nb_products_sold
+        description: Number of individual products sold in the month
+      - name: avg_nb_item_per_order
+        description: Average number of items per order
