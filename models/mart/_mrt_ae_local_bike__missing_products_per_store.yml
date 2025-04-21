@@ -1,0 +1,19 @@
+version: 2
+
+models:
+
+  - name: mrt_ae_local_bike__missing_products_per_store
+    description: '{{ doc("mrt_ae_local_bike__missing_products_per_store") }}'
+    columns:
+      - name: store_name
+        description: Name of the store
+      - name: product_name
+        description: Name of the product
+      - name: product_id
+        description: Identifier for the product
+      - name: item_stock
+        description: Current quantity of the product in stock
+      - name: nb_items_ordered
+        description: Total quantity of the product ordered but not shipped
+      - name: stock_level
+        description: Difference between current stock and items ordered (item_stock - nb_items_ordered)

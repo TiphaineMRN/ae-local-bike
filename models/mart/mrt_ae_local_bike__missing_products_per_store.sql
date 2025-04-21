@@ -4,7 +4,7 @@ WITH items_to_ship AS (
     oi.product_id,
     oi.item_quantity
   FROM {{ref("int_ae_local_bike__orders")}} o
-  LEFT JOIN {{ref("stg_ae_local_bike__order_items")}} oi ON o.order_id = oi.order_id
+  LEFT JOIN {{ref("int_ae_local_bike__order_items")}} oi ON o.order_id = oi.order_id
   WHERE o.shipped_date IS NULL
 )
 
